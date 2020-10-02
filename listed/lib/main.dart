@@ -42,8 +42,29 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
 
-    return Scaffold(
-
+    return DefaultTabController(length: 3,
+        child: Scaffold(
+          bottomNavigationBar: BottomNavigationBar(
+            backgroundColor: Colors.red,
+            showSelectedLabels: false,
+            showUnselectedLabels: false,
+            selectedItemColor: Colors.blue,
+            items: <BottomNavigationBarItem>[
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.show_chart),
+                  label: 'Watchlist'
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.rss_feed_sharp),
+                label: 'Market View'
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.info),
+                label: 'About'
+              ),
+            ],
+          ),
+        ),
     );
   }
 }
