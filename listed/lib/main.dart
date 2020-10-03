@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:font_awesome_flutter_example/icons.dart';
 
 void main() {
   runApp(MyApp());
@@ -44,27 +43,74 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
 
+    var devicesize = MediaQuery.of(context).size;
+
+    var topBar = AppBar(
+        backgroundColor: Color.fromRGBO(60,64,198,1.0),
+        title: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text('My Watchlist',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 30,
+          ),
+          ),
+        ),
+        titleSpacing: 5,
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 8.0),
+            child: IconButton(
+                icon: Icon(
+                    Icons.search_outlined,
+                    size: 35,
+                    color: Colors.white,
+                ),
+                onPressed: null
+            ),
+          ),
+        ],
+    );
+
+    var navBar = BottomNavigationBar(
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        iconSize: 30,
+        backgroundColor: Color.fromRGBO(60,64,198,1.0),
+        //Color.fromRGBO(47,53,66,1.0),
+        unselectedItemColor: Colors.white,
+        //Color.fromRGBO(206,214,224,1.0),
+        selectedItemColor: Color.fromRGBO(255,168,1,1.0),
+        //Color.fromRGBO(72,219,251,1.0),
+        items: [
+          BottomNavigationBarItem(
+              icon: Icon(FontAwesomeIcons.chartArea),
+              label: 'Watchlist',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(FontAwesomeIcons.newspaper),
+            label: "News",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings_sharp),
+            label: "Settings"
+          )
+        ],
+    );
+
     return DefaultTabController(length: 3,
         child: Scaffold(
-          bottomNavigationBar: BottomNavigationBar(
-            backgroundColor: Colors.red,
-            showSelectedLabels: false,
-            showUnselectedLabels: false,
-            selectedItemColor: Colors.blue,
-            items: <BottomNavigationBarItem>[
-              BottomNavigationBarItem(
-                  icon: FaIcon(FontAwesomeIcons.chartLine),
-                  label: 'Watchlist'
+          extendBodyBehindAppBar: true,
+          appBar: topBar,
+          backgroundColor: Color.fromRGBO(72,84,96,1.0),
+          bottomNavigationBar: Container(
+              child: ClipRRect(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(35),
+                    topRight: Radius.circular(35),
+                  ),
+                  child: navBar,
               ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.rss_feed_sharp),
-                label: 'Market View'
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.info),
-                label: 'About'
-              ),
-            ],
           ),
         ),
     );
