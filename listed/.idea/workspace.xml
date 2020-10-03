@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cd63a327-9054-4def-ad05-370e3ad28fe3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/WatchlistMainView.dart" afterDir="false" />
-    </list>
+    <list default="true" id="cd63a327-9054-4def-ad05-370e3ad28fe3" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
