@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cd63a327-9054-4def-ad05-370e3ad28fe3" name="Default Changelist" comment="" />
+    <list default="true" id="cd63a327-9054-4def-ad05-370e3ad28fe3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/WatchlistView.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Flutter/Generated.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/Generated.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Flutter/flutter_export_environment.sh" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/flutter_export_environment.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/StockView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/StockView.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,30 +56,34 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601771670772">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1601771670772" />
     <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601745741219">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1601745741219" />
-    <state width="1306" height="217" key="GridCell.Tab.0.bottom" timestamp="1601759578815">
+    <state width="1323" height="131" key="GridCell.Tab.0.bottom" timestamp="1601849155053">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="217" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1601759578815" />
-    <state width="1306" height="217" key="GridCell.Tab.0.center" timestamp="1601759578815">
+    <state width="1323" height="131" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1601849155052" />
+    <state width="1323" height="131" key="GridCell.Tab.0.center" timestamp="1601849155051">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="217" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1601759578815" />
-    <state width="1306" height="217" key="GridCell.Tab.0.left" timestamp="1601759578815">
+    <state width="1323" height="131" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1601849155051" />
+    <state width="1323" height="131" key="GridCell.Tab.0.left" timestamp="1601849155051">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="217" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1601759578815" />
-    <state width="1306" height="217" key="GridCell.Tab.0.right" timestamp="1601759578815">
+    <state width="1323" height="131" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1601849155051" />
+    <state width="1323" height="131" key="GridCell.Tab.0.right" timestamp="1601849155052">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="217" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1601759578815" />
-    <state x="92" y="92" width="1182" height="544" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1601745359204">
+    <state width="1323" height="131" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1601849155052" />
+    <state x="92" y="92" width="1182" height="544" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1601774350438">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="92" y="92" width="1182" height="544" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1366.728@0.0.1366.728" timestamp="1601745359204" />
+    <state x="92" y="92" width="1182" height="544" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1366.728@0.0.1366.728" timestamp="1601774350438" />
     <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1601753674197">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
