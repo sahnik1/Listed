@@ -14,45 +14,29 @@ class WatchlistView extends StatelessWidget{
   Widget build(BuildContext context) {
     var devicesize = MediaQuery.of(context).size;
 
-    return Padding(
-      padding: EdgeInsets.all(devicesize.width*0.04),
-      child: ListView(
-        children: [
-          Container(
-            width: devicesize.width*0.95,
-            height: devicesize.height*0.15,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(30)),
-              color: Colors.white,
-              boxShadow: <BoxShadow>[
-                BoxShadow(
-                    color: Colors.black54,
-                    blurRadius: 15.0,
-                    offset: Offset(0.0, 0.75)
-                )
-              ],
-            ),
+    var stockslist = <Widget>[
+      Card(
+        child: Container(
+          width: devicesize.width,
+          height: devicesize.height*0.18,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(30)),
+            color: Colors.white,
+
           ),
-          SizedBox(
-            height: devicesize.height*0.025,
-          ),
-          Container(
-            width: devicesize.width*0.95,
-            height: devicesize.height*0.15,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(30)),
-              color: Colors.white,
-              boxShadow: <BoxShadow>[
-                BoxShadow(
-                    color: Colors.black54,
-                    blurRadius: 15.0,
-                    offset: Offset(0.0, 0.75)
-                )
-              ],
-            ),
-          ),
-        ],
+        ),
       ),
-    );
+      SizedBox(
+        height: devicesize.height*0.025,
+      ),
+    ];
+
+    return ListView.builder(
+        padding: EdgeInsets.all(15),
+        itemCount: stockslist.length,
+        itemBuilder: (context, index) {
+          return stockslist[index];
+        },
+      );
   }
 }

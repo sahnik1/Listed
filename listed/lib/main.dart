@@ -56,11 +56,17 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  final List<Widget> _viewList = [
+      WatchlistView(),
+      Container(color: Colors.blue),
+      Container(color: Colors.red),
+  ];
 
-  void _incrementCounter() {
+  var _currIndex = 0;
+
+  void _tapChangeView (int index) {
     setState(() {
-      _counter++;
+      _currIndex = index;
     });
   }
 
@@ -70,14 +76,14 @@ class _MyHomePageState extends State<MyHomePage> {
     var devicesize = MediaQuery.of(context).size;
 
     var topBar = AppBar(
-        backgroundColor: Colors.transparent,
-        shadowColor: Colors.transparent,
+        backgroundColor: Colors.white,
+        //shadowColor: Colors.transparent,
         title: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Text('My Watchlist',
             style: GoogleFonts.lato(
               textStyle: TextStyle(
-                color: Colors.white,
+                color: Colors.black,
                 fontSize: 35,
                 fontWeight: FontWeight.w700,
                 letterSpacing: 3,
@@ -93,7 +99,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 icon: Icon(
                     Icons.search_outlined,
                     size: 35,
-                    color: Colors.white,
+                    color: Colors.black,
                 ),
                 onPressed: null
             ),
@@ -102,6 +108,8 @@ class _MyHomePageState extends State<MyHomePage> {
     );
 
     var navBar = BottomNavigationBar(
+        onTap: _tapChangeView,
+        currentIndex: _currIndex,
         showSelectedLabels: false,
         showUnselectedLabels: false,
         iconSize: 30,
@@ -139,19 +147,30 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
           child: Scaffold(
-            extendBodyBehindAppBar: true,
+            extendBodyBehindAppBar: false,
             appBar: topBar,
             backgroundColor: Colors.transparent,
             bottomNavigationBar: Container(
+                decoration: BoxDecoration(
+                  boxShadow: <BoxShadow>[
+                    new BoxShadow(blurRadius: 80.0)
+                  ],
+                  color: Colors.transparent,
+                ),
                 child: ClipRRect(
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(35),
                       topRight: Radius.circular(35),
                     ),
-                    child: navBar,
+                    child: Theme(
+                        child: navBar,
+                        data: ThemeData(
+                          splashColor: Colors.transparent
+                        ),
+                    ),
                 ),
             ),
-            body: WatchlistView(),
+            body: _viewList[_currIndex],
           ),
         ),
     );
