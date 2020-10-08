@@ -76,14 +76,14 @@ class _MyHomePageState extends State<MyHomePage> {
     var devicesize = MediaQuery.of(context).size;
 
     var topBar = AppBar(
-        backgroundColor: Colors.white,
-        //shadowColor: Colors.transparent,
+        backgroundColor: Color.fromRGBO(138, 63, 216, 1.0),
+        shadowColor: Colors.transparent,
         title: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Text('My Watchlist',
             style: GoogleFonts.lato(
               textStyle: TextStyle(
-                color: Colors.black,
+                color: Colors.white,
                 fontSize: 35,
                 fontWeight: FontWeight.w700,
                 letterSpacing: 3,
@@ -136,43 +136,29 @@ class _MyHomePageState extends State<MyHomePage> {
     );
 
     return DefaultTabController(length: 3,
-        child: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [ Color.fromRGBO(15, 188, 249,1.0),
-                  Color.fromRGBO(5, 196, 107,1.0)
-                ]
-            ),
-          ),
           child: Scaffold(
+            extendBody: true,
             extendBodyBehindAppBar: false,
             appBar: topBar,
-            backgroundColor: Colors.transparent,
-            bottomNavigationBar: Container(
-                decoration: BoxDecoration(
-                  boxShadow: <BoxShadow>[
-                    new BoxShadow(blurRadius: 80.0)
-                  ],
-                  color: Colors.transparent,
-                ),
-                child: ClipRRect(
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(35),
-                      topRight: Radius.circular(35),
-                    ),
-                    child: Theme(
-                        child: navBar,
-                        data: ThemeData(
-                          splashColor: Colors.transparent
-                        ),
-                    ),
-                ),
+            backgroundColor: Color.fromRGBO(116, 185, 255,1.0),
+            //Color.fromRGBO(240, 245, 255, 1.0),
+            bottomNavigationBar: Padding(
+              padding: const EdgeInsets.only(top: 8.0),
+              child: ClipRRect(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(35),
+                        topRight: Radius.circular(35),
+                      ),
+                      child: Theme(
+                          child: navBar,
+                          data: ThemeData(
+                            splashColor: Colors.transparent
+                          ),
+                      ),
+                  ),
             ),
             body: _viewList[_currIndex],
           ),
-        ),
     );
   }
 }

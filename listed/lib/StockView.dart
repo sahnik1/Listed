@@ -31,9 +31,6 @@ class StockView extends StatefulWidget {
 }
 
 class _StockViewState extends State<StockView> {
-  String ticker;
-  double bidPrice;
-  double askPrice;
 
   @override
   Widget build(BuildContext context) {
