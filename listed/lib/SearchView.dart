@@ -22,53 +22,67 @@ class SearchView extends StatefulWidget {
 
 class SearchViewState extends State<SearchView>{
   var isLoading = false;
-  var dbstuff = DBHelperStockSearch.dbinstance;
+  //var symbolslist = <StockSearch>[];
 
   Future _doneFuture;
 
   _getSymbolsInit() async{
-    await dbstuff.initDB();
-    var apiprovider = StockSearchProvider();
-    await apiprovider.fetchSymbols();
+    var apiprovider = await StockSearchProvider();
+    var symbolslist = await apiprovider.fetchSymbols();
+    return symbolslist;
   }
 
   @override
   void initState() {
-    _doneFuture = _getSymbolsInit();
+    //_getSymbolsInit();
     super.initState();
   }
 
   _buildSearchListView() {
     return FutureBuilder(
-      future: dbstuff.getAllStocks(),
-      builder: (BuildContext context, AsyncSnapshot snapshot) {
-        print(snapshot);
-        if (!snapshot.hasData) {
+      future: _getSymbolsInit(),
+      builder: (context, dataSnapshot) {
+        if (!dataSnapshot.hasData){
           return Center(
             child: CircularProgressIndicator(),
           );
-        } else {
-          return ListView.separated(
-            separatorBuilder: (context, index) => Divider(
-              color: Colors.black12,
-            ),
-            itemCount: snapshot.data.length,
-            itemBuilder: (BuildContext context, int index) {
-              return ListTile(
-                leading: Text(
-                  "${index + 1}",
-                  style: TextStyle(fontSize: 20.0),
-                ),
-                title: Text(
-                    "Name: ${snapshot.data[index].firstName} ${snapshot.data[index].lastName} "),
-                subtitle: Text('EMAIL: ${snapshot.data[index].email}'),
-              );
-            },
-          );
         }
-      },
+        return ListView.builder(
+          padding: EdgeInsets.all(10.0),
+          itemCount: dataSnapshot.data.length,
+          itemBuilder: (BuildContext context, int index) {
+            return Card(
+              child: Padding(
+                padding: EdgeInsets.all(10.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      dataSnapshot.data[index].symbol,
+                      style: TextStyle(
+                        fontSize: 16.0,
+                        color: Colors.black,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 5.0,
+                    ),
+                    Text(
+                      dataSnapshot.data[index].description,
+                      style: TextStyle(
+                        fontSize: 14.0,
+                        color: Colors.grey,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            );
+          },
+        );
+      }
     );
-
   }
 
   @override

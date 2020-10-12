@@ -10,9 +10,9 @@ import 'package:path/path.dart';
 class DBHelperStockSearch {
   static Database _db;
   static const String SYMBOL = 'symbol';
-  static const String NAME = 'name';
-  static const String ISETF = 'isetf';
-  static const String EXCH = 'exch';
+  static const String CURRENCY = 'currency';
+  static const String DESC = 'description';
+  static const String TYPE = 'type';
   static const String SearchTABLE = 'StockSymbols';
   static const String DB_NAME = 'stocks.db';
 
@@ -36,11 +36,7 @@ class DBHelperStockSearch {
   }
 
   _onCreate(Database db, int version) async {
-    await db.execute("CREATE TABLE $SearchTABLE ("
-        "$SYMBOL TEXT PRIMARY KEY, "
-        "$NAME TEXT,"
-        "$ISETF TEXT,"
-        "$EXCH TEXT)");
+    await db.execute("CREATE TABLE $SearchTABLE ($SYMBOL TEXT PRIMARY KEY, $CURRENCY TEXT, $DESC TEXT, $TYPE TEXT)");
   }
 
   addStockSearch(StockSearch searchobject) async {
