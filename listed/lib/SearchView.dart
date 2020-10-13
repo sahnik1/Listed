@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 import 'dart:convert' as convert;
 import 'package:http/http.dart' as http;
 import 'package:google_fonts/google_fonts.dart';
@@ -21,14 +21,16 @@ class SearchView extends StatefulWidget {
 }
 
 class SearchViewState extends State<SearchView>{
-  var isLoading = false;
   //var symbolslist = <StockSearch>[];
 
   Future _doneFuture;
 
+  var isfavouritebtn = false;
+
   _getSymbolsInit() async{
     var apiprovider = await StockSearchProvider();
     var symbolslist = await apiprovider.fetchSymbols();
+    print('API was called!!');
     return symbolslist;
   }
 
@@ -36,6 +38,12 @@ class SearchViewState extends State<SearchView>{
   void initState() {
     //_getSymbolsInit();
     super.initState();
+  }
+
+  void favbtnstate() {
+    setState(() {
+      isfavouritebtn = !isfavouritebtn;
+    });
   }
 
   _buildSearchListView() {
@@ -48,33 +56,46 @@ class SearchViewState extends State<SearchView>{
           );
         }
         return ListView.builder(
+          physics: BouncingScrollPhysics(),
           padding: EdgeInsets.all(10.0),
           itemCount: dataSnapshot.data.length,
           itemBuilder: (BuildContext context, int index) {
             return Card(
+              color: Color.fromRGBO(50, 54, 57, 1.0),
               child: Padding(
                 padding: EdgeInsets.all(10.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text(
-                      dataSnapshot.data[index].symbol,
-                      style: TextStyle(
-                        fontSize: 16.0,
-                        color: Colors.black,
-                      ),
+                child: Row(
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text(
+                          dataSnapshot.data[index].symbol,
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            color: Colors.white,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 5.0,
+                        ),
+                        Text(
+                          dataSnapshot.data[index].description,
+                          style: TextStyle(
+                            fontSize: 16.0,
+                            color: Colors.grey,
+                          ),
+                        ),
+                      ],
                     ),
-                    SizedBox(
-                      height: 5.0,
-                    ),
-                    Text(
-                      dataSnapshot.data[index].description,
-                      style: TextStyle(
-                        fontSize: 14.0,
-                        color: Colors.grey,
-                      ),
-                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        IconButton(icon: Icon(Icons.star), onPressed: null),
+                      ],
+                    )
                   ],
                 ),
               ),

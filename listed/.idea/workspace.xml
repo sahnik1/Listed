@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="cd63a327-9054-4def-ad05-370e3ad28fe3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/SearchView.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Stock.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/db_helper_StockSearch.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/SearchView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/SearchView.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Stock.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Stock.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/WatchlistView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WatchlistView.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
@@ -69,29 +71,29 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="538" y="129" key="AndroidProcessChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1602380124137" />
-    <state width="1323" height="150" key="GridCell.Tab.0.bottom" timestamp="1602384520918">
+    <state width="1323" height="136" key="GridCell.Tab.0.bottom" timestamp="1602556025315">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="150" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1602384520918" />
-    <state width="1323" height="150" key="GridCell.Tab.0.center" timestamp="1602384520917">
+    <state width="1323" height="136" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1602556025315" />
+    <state width="1323" height="136" key="GridCell.Tab.0.center" timestamp="1602556025315">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="150" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1602384520917" />
-    <state width="1323" height="150" key="GridCell.Tab.0.left" timestamp="1602384520917">
+    <state width="1323" height="136" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1602556025314" />
+    <state width="1323" height="136" key="GridCell.Tab.0.left" timestamp="1602556025314">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="150" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1602384520917" />
-    <state width="1323" height="150" key="GridCell.Tab.0.right" timestamp="1602384520918">
+    <state width="1323" height="136" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1602556025314" />
+    <state width="1323" height="136" key="GridCell.Tab.0.right" timestamp="1602556025315">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="150" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1602384520918" />
-    <state x="92" y="92" width="1182" height="544" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1602363246421">
+    <state width="1323" height="136" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1602556025315" />
+    <state x="92" y="92" width="1182" height="544" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1602555832608">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="92" y="92" width="1182" height="544" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1366.728@0.0.1366.728" timestamp="1602363246421" />
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1602435068268">
+    <state x="92" y="92" width="1182" height="544" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1366.728@0.0.1366.728" timestamp="1602555832608" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1602555275394">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1602435068268" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1602555275394" />
   </component>
 </project>

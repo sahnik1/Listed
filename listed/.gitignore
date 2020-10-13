@@ -9,6 +9,9 @@
 .history
 .svn/
 
+# API Keys and Personal Data
+api_details.dart
+
 # IntelliJ related
 *.iml
 *.ipr

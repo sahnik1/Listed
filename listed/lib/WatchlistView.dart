@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 import 'dart:convert' as convert;
 import 'package:http/http.dart' as http;
 import 'package:google_fonts/google_fonts.dart';
@@ -17,13 +17,12 @@ class WatchlistView extends StatelessWidget{
 
   final cardDecoration = BoxDecoration(
     color: Color.fromRGBO(50, 54, 57, 1.0),
-    borderRadius: BorderRadius.circular(30),
+    //borderRadius: BorderRadius.circular(0.5),
   );
 
   @override
   Widget build(BuildContext context) {
     var devicesize = MediaQuery.of(context).size;
-
 
     var stockslist = <Widget>[
       InkWell(
@@ -82,7 +81,7 @@ class WatchlistView extends StatelessWidget{
         behavior: new ScrollBehavior()..buildViewportChrome(context, null, AxisDirection.down),
         child: Scrollbar(
           child: ListView.builder(
-              physics: const ScrollPhysics(),
+              physics: const BouncingScrollPhysics(),
               padding: EdgeInsets.only(left: devicesize.width*0.04, top: 15, right: devicesize.width*0.04, bottom: devicesize.height/11),
               itemCount: stockslist.length,
               itemBuilder: (context, index) {

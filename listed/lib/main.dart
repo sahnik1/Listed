@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 import 'dart:convert' as convert;
 import 'package:http/http.dart' as http;
 import 'package:google_fonts/google_fonts.dart';
@@ -97,11 +97,11 @@ class _MyHomePageState extends State<MyHomePage> {
         //Color.fromRGBO(72,219,251,1.0),
         items: [
           BottomNavigationBarItem(
-              icon: Icon(Icons.show_chart),
+              icon: Icon(Icons.timeline_outlined),
               label: 'Watchlist',
           ),
           BottomNavigationBarItem(
-            icon: Icon(FontAwesomeIcons.solidNewspaper),
+            icon: Icon(Icons.workspaces_outline),
             label: "News",
           ),
           BottomNavigationBarItem(
@@ -109,9 +109,13 @@ class _MyHomePageState extends State<MyHomePage> {
             label: "Search",
           ),
           BottomNavigationBarItem(
+              icon: Icon(FlutterIcons.globe_ent),
+              label: "Markets"
+          ),
+          BottomNavigationBarItem(
             icon: Icon(Icons.settings_sharp),
             label: "Settings"
-          )
+          ),
         ],
     );
 
